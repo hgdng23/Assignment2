@@ -74,5 +74,8 @@ def test_add_more_products_to_cart():
     time.sleep(2)
     driver.find_element(By.XPATH, "//span[text()='Shopping Cart']").click()
     time.sleep(2)
+    assert "HTC Touch HD" in page_source, "HTC Touch HD không có trong danh sách sản phẩm"
+    assert "Palm Treo Pro" in page_source, "Palm Treo Pro không có trong danh sách sản phẩm"
+    assert "iPhone" in page_source, "iPhone không có trong danh sách sản phẩm"
     driver.quit()
 
