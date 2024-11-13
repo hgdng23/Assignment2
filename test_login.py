@@ -33,7 +33,7 @@ def test_invalid_login():
     assert "Warning: No match for E-Mail Address and/or Password." in error_alert.get_attribute("innerText")
     driver.quit()
 
-def test_emty_login():
+def test_empty_login():
     driver = webdriver.Chrome()
     driver.get("http://localhost/opencart-4.0.2.3/upload/")
     driver.find_element(By.XPATH, "//span[text()='My Account']").click()
