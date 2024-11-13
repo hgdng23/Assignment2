@@ -23,7 +23,7 @@ def test_register_user():
     assert success_message.is_displayed(), "Dòng text xác nhận không được hiển thị."
     driver.quit()
 
-def test_register_emty_email():
+def test_register_empty_email():
     driver = webdriver.Chrome()
     driver.get("http://localhost/opencart-4.0.2.3/upload/")
     driver.find_element(By.XPATH, "//span[text()='My Account']").click()
